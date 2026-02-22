@@ -1,0 +1,99 @@
+.block {
+  padding: 40px;
+  padding-bottom: 0;
+}
+
+.contentWrapper {
+  gap: 40px;
+  flex-direction: column;
+  display: flex;
+  margin: 0 auto;
+  max-width: 1360px;
+}
+
+.headerBlock {
+  width: 100%;
+  display: flex;
+}
+
+.heading {
+  color: var(--color-black);
+  font-size: 64px;
+  line-height: 1.1;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+}
+
+.separator {
+  align-self: center;
+  margin-top: 40px;
+  background-color: var(--color-grey-divider);
+  height: 1px;
+  flex: 1;
+}
+
+.linkBtn {
+  margin-top: 22px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  border-radius: 6px;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: var(--color-grey);
+  font-size: 16px;
+  line-height: 1.26;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  border: 1px solid var(--color-grey-divider);
+}
+
+.linkBtn:hover {
+  background-color: var(--color-light-grey);
+}
+
+.scrollContainer {
+  cursor: grab;
+  width: 100%;
+  scroll-snap-type: x mandatory;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+
+.scrollContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.grid {
+  padding: 0;
+  width: max-content;
+  gap: 32px;
+  display: flex;
+}
+
+.grid > * {
+  scroll-snap-align: start;
+  max-width: 316px;
+  flex: 0 0 316px;
+}
+
+@media (max-width: 768px) {
+  .block {
+    padding: 40px 20px;
+  }
+
+  .heading {
+    font-size: 40px;
+  }
+
+  .headerBlock {
+    flex-wrap: wrap;
+  }
+
+  .grid > * {
+    max-width: calc(100vw - 80px);
+    flex: 0 0 calc(100vw - 80px);
+  }
+}

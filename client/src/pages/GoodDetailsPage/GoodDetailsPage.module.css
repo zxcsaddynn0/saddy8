@@ -1,0 +1,183 @@
+.pageWrapper {
+  min-height: 60vh;
+  padding: 40px;
+  padding-bottom: 0;
+  padding-top: 116px;
+}
+
+.inner {
+  margin: 0 auto;
+  max-width: 1360px;
+}
+
+.details {
+  align-items: flex-start;
+  gap: 32px;
+  display: flex;
+}
+
+.photoContainer {
+  overflow: hidden;
+  border-radius: 12px;
+  height: 572px;
+  width: 780px;
+  max-width: 780px;
+  position: relative;
+  flex: 1;
+}
+
+.photo {
+  display: block;
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+}
+
+.discountBadge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: var(--color-green);
+  color: var(--color-white);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.3;
+  padding: 8px 16px;
+  border-radius: 6px;
+}
+
+.infoBlock {
+  max-width: 548px;
+  gap: 32px;
+  flex-direction: column;
+  display: flex;
+  flex: 1;
+}
+
+.heading {
+  letter-spacing: 0.03em;
+  color: var(--color-black);
+  font-size: 40px;
+  line-height: 1.1;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+}
+
+.priceBlock {
+  flex-wrap: wrap;
+  gap: 16px;
+  display: flex;
+}
+
+.discountBadgeSmall {
+  height: 34px;
+  border-radius: 6px;
+  padding: 4px 8px;
+  letter-spacing: 0.03em;
+  font-size: 20px;
+  line-height: 1.3;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  color: var(--color-white);
+  background-color: var(--color-green);
+}
+
+.priceSection {
+  gap: 32px;
+  align-items: baseline;
+  display: flex;
+}
+
+.cost {
+  color: var(--color-black);
+  font-size: 64px;
+  line-height: 1.1;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+}
+
+.originalPrice {
+  text-decoration: line-through;
+  color: var(--color-grey);
+  font-size: 40px;
+  line-height: 1.3;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+}
+
+.actionsBlock {
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 32px;
+  display: flex;
+}
+
+.actionsBlock > *:last-child {
+  width: 316px;
+}
+
+.descriptionBlock {
+  width: 100%;
+  gap: 16px;
+  flex-direction: column;
+  display: flex;
+}
+
+.descriptionHeading {
+  color: var(--color-black);
+  font-size: 20px;
+  line-height: 1.3;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+}
+
+.description {
+  max-height: 227px;
+  overflow-y: auto;
+  color: var(--color-black);
+  font-size: 16px;
+  line-height: 1.3;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+}
+
+.loading,
+.error {
+  font-size: 24px;
+  padding: 40px;
+  text-align: center;
+}
+
+.error {
+  color: red;
+}
+
+@media (max-width: 1024px) {
+  .details {
+    flex-direction: column;
+  }
+
+  .photoContainer {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .pageWrapper {
+    padding: 20px;
+  }
+
+  .heading {
+    font-size: 36px;
+  }
+
+  .cost {
+    font-size: 48px;
+  }
+
+  .originalPrice {
+    font-size: 24px;
+  }
+}
